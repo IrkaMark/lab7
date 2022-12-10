@@ -1,0 +1,49 @@
+<html>
+<head>
+    <script type="text/javascript" src="loadxmldoc.js"></script> //вызов функции
+</head>
+<body>
+    <script type="text/javascript">
+        xmlDoc = loadXMLDoc("file.xml");
+        document.write("xmlDoc is loaded, ready for use:");
+        document.write("<table border = '1' width='40%' style='font-size:20px;'>");
+        document.write("<tr><th>Number</th><th>Student</th><th>Result</th><th>ResaltOfLater</th></tr>");
+        students = xmlDoc.getElementsByTagName("student"); //доступ к узлу элемента хмл
+        result =  xmlDoc.getElementsByTagName("result");   //доступ к узлу элемента хмл
+
+        for (i=0; i < students.length; i++) {
+            document.write("<tr><td>");
+            document.write(i + 1);
+            document.write("</td><td>");
+            document.write(students[i].childNodes[0].nodeValue); //отношения между узлами
+            document.write("</td><td>");
+            document.write(result[i].childNodes[0].nodeValue); //отношения между узлами
+            document.write("</td><td>");
+            switch (result[i].childNodes[0].nodeValue) {
+               case "1":
+                   result[i].childNodes[0].nodeValue = "Very bad";
+                   document.write(result[i].childNodes[0].nodeValue);
+                   break;
+               case "2":
+                   result[i].childNodes[0].nodeValue = "Bad";
+                   document.write(result[i].childNodes[0].nodeValue);
+                   break;
+               case "3":
+                   result[i].childNodes[0].nodeValue = "Good";
+                   document.write(result[i].childNodes[0].nodeValue);
+                   break;
+               case "4":
+                   result[i].childNodes[0].nodeValue = "Very good";
+                   document.write(result[i].childNodes[0].nodeValue);
+                   break;
+               case "5":
+                   result[i].childNodes[0].nodeValue = "Excellent";
+                   document.write(result[i].childNodes[0].nodeValue);
+                   break;
+            }
+            document.write("</td></tr>");
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>

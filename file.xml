@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<file id="120851">
+  <date>10‐12-2022</date>
+  <subject>Marketing</subject>
+  <examiner>prof.Loginova</examiner>
+  <gradeList>
+    <file id="1">
+      <student>Markovskaya</student>
+      <result>5</result>
+    </file>
+    <gradeRecord id="2">
+      <student>Kisel</student>
+      <result>5</result>
+    </gradeRecord>
+    <file id="3">
+      <student>Petrov</student>
+      <result>2</result>
+    </file>
+    <gradeRecord id="4">
+      <student>Vabischevivh</student>
+      <result>4</result>
+    </gradeRecord>
+    <file id="5">
+      <student>Krug</student>
+      <result>5</result>
+    </file>
+    <gradeRecord id="6">
+      <student>Pashkevivh</student>
+      <result>1</result>
+    </gradeRecord>
+  </gradeList>
+</file>
+
